@@ -17,7 +17,7 @@ const EditProduct = () => {
   const updateProducts = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://backend-dot-final-project-388509.as.r.appspot.com/products/${id}`, {
+      await axios.put(`https://backend-dot-final-project-388509.as.r.appspot.com/products/${id}`, {
         namaProduct,
         deskripsiProduct,
         hargaProduct,
@@ -30,7 +30,7 @@ const EditProduct = () => {
   };
 
   const getProductById = async () => {
-    const response = await axios.get(`http://localhost:5000/products/${id}`);
+    const response = await axios.get(`https://backend-dot-final-project-388509.as.r.appspot.com/products/${id}`);
     setnamaProduct(response.data.namaProduct);
     setdeskripsiProduct(response.data.deskripsiProduct);
     sethargaProduct(response.data.hargaProduct);
