@@ -17,7 +17,7 @@ const EditProduct = () => {
   const updateProducts = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:5000/products/${id}`, {
+      await axios.patch(`https://backend-dot-final-project-388509.as.r.appspot.com/products/${id}`, {
         namaProduct,
         deskripsiProduct,
         hargaProduct,

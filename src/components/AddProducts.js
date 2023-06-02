@@ -12,7 +12,7 @@ const AddProduct = () => {
   const saveProducts = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/products", {
+      await axios.post("https://backend-dot-final-project-388509.as.r.appspot.com/products", {
         namaProduct,
         deskripsiProduct,
         hargaProduct,

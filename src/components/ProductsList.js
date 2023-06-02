@@ -11,13 +11,13 @@ const ProductsList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("http://localhost:5000/products");
+    const response = await axios.get("https://backend-dot-final-project-388509.as.r.appspot.com/products");
     setProducts(response.data);
   };
 
   const deleteProducts = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/products/${id}`);
+      await axios.delete(`https://backend-dot-final-project-388509.as.r.appspot.com/products/${id}`);
       getProducts();
     } catch (error) {
       console.log(error);
